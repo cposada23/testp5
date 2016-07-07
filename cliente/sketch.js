@@ -1,7 +1,20 @@
+var video;
+var button;
 function setup() {
-  createCanvas(200,200);
+  createCanvas(320,240);
+  background(0);
+  video = createCapture(VIDEO);
+  video.size(320,240);
+  button = createButton('snap');
+  
+  button.mousePressed(shot);
+  
+}
+
+function shot(){
+  image(video,0,0);
 }
 
 function draw() {
-  rect(50,50,20,20);
+
 }
